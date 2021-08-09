@@ -1,8 +1,6 @@
 package com.dingchw.infrastructure.web.mvc;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;

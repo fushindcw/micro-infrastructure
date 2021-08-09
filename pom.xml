@@ -11,7 +11,8 @@
 
   <properties>
     <revision>1.0.0</revision>
-    <java.version>11</java.version>
+    <java.source.version>1.8</java.source.version>
+    <java.target.version>1.8</java.target.version>
   </properties>
   <modules>
     <module>infrastructure-commons</module>
@@ -54,8 +55,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>${java.source.version}</source>
+          <target>${java.target.version}</target>
         </configuration>
       </plugin>
       <plugin>
