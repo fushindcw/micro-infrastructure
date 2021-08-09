@@ -7,7 +7,13 @@
 		<version>${revision}</version>
 	</parent>
 	<artifactId>samples</artifactId>
+	<packaging>pom</packaging>
 	<description>Demo project for Spring Boot</description>
+	<modules>
+		<module>api</module>
+		<module>consumer</module>
+		<module>provider</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -18,23 +24,22 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>com.dingchw</groupId>
+				<artifactId>infrastructure-rest</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dingchw</groupId>
+				<artifactId>infrastructure-feign</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dingchw</groupId>
+				<artifactId>api</artifactId>
+				<version>${revision}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.dingchw</groupId>
-			<artifactId>infrastructure-rest</artifactId>
-			<version>${revision}</version>
-		</dependency>
-	</dependencies>
 
 </project>

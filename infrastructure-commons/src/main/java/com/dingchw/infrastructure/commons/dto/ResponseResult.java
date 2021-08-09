@@ -15,6 +15,10 @@ public final class ResponseResult<T> implements Serializable{
     private String message;
     private T data;
 
+    public ResponseResult(){
+        this(null, StatusEnum.OK);
+    }
+
     public ResponseResult(T data){
         this(data, StatusEnum.OK);
     }

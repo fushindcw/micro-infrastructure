@@ -1,0 +1,15 @@
+server:
+    port: 8093
+spring:
+  application:
+    name: providerService
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.108:8848
+      config:
+        server-addr: 192.168.100.108:8848
+        prefix: application
+        file-extension: yaml
+  main:
+    allow-bean-definition-overriding: true
