@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.dingchw</groupId>
+		<groupId>com.tumu</groupId>
 		<artifactId>micro-infrastructure</artifactId>
 		<version>${revision}</version>
 	</parent>
@@ -18,24 +18,24 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.dingchw</groupId>
-				<artifactId>dingchw-dependencies-parent</artifactId>
+				<groupId>com.tumu</groupId>
+				<artifactId>tumu-dependencies-parent</artifactId>
 				<version>1.0.3</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.dingchw</groupId>
+				<groupId>com.tumu</groupId>
 				<artifactId>infrastructure-rest</artifactId>
 				<version>${revision}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.dingchw</groupId>
+				<groupId>com.tumu</groupId>
 				<artifactId>infrastructure-feign</artifactId>
 				<version>${revision}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.dingchw</groupId>
+				<groupId>com.tumu</groupId>
 				<artifactId>api</artifactId>
 				<version>${revision}</version>
 			</dependency>
