@@ -1,5 +1,6 @@
 package com.tumu.infrastructure.web.mvc.handler;
 
+import com.tumu.infrastructure.commons.MessageTypeEnum;
 import com.tumu.infrastructure.commons.dto.ResponseResult;
 import com.tumu.infrastructure.commons.exception.AbstractBusinessException;
 
@@ -23,7 +24,7 @@ public class ExceptionGlobalHandler {
             AbstractBusinessException abstractBusinessException = (AbstractBusinessException) e;
             return new ResponseResult<>(abstractBusinessException);
         }else{
-            return new ResponseResult<>(5000, e.getMessage());
+            return new ResponseResult<>(5000, e.getMessage(), MessageTypeEnum.FAIL);
         }
     }
 }
