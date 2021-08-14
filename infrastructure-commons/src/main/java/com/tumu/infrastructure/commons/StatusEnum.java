@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum StatusEnum {
-    NOT_FOUND(4004, "资源找不到"),
-    OK(1000, "SUCCESS");
+    OK(2000, "SUCCESS"),
+    NOT_FOUND(4004, "资源找不到");
 
     private Integer code;
     private String msg;

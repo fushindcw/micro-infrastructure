@@ -1,5 +1,7 @@
 package com.tumu.infrastructure.commons.exception;
 
+import com.tumu.infrastructure.commons.MessageTypeEnum;
+
 public abstract class AbstractBusinessException extends RuntimeException{
     protected AbstractBusinessException(String msg){
         super(msg);
@@ -10,4 +12,8 @@ public abstract class AbstractBusinessException extends RuntimeException{
     }
     
     public abstract Integer statusCode();
+
+    public MessageTypeEnum messageType(){
+        return MessageTypeEnum.WARN;
+    }
 }

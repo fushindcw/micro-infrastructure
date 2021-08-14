@@ -23,8 +23,8 @@ public class UnwrapDecoder extends SpringDecoder{
 
     @Override
     public Object decode(Response response, Type type) throws IOException, FeignException {
-        String responsejson = (String)super.decode(response, String.class);
-        ResponseResult<?> wrapperResult = JSON.parseObject(responsejson, ResponseResult.class);
+        String responseJson = (String)super.decode(response, String.class);
+        ResponseResult<?> wrapperResult = JSON.parseObject(responseJson, ResponseResult.class);
         if(!wrapperResult.getCode().equals(StatusEnum.OK.getCode())){
             throw new CommonBusinessException(wrapperResult.getMessage(), wrapperResult.getCode());
         }

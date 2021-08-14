@@ -1,4 +1,4 @@
-package com.tumu.infrastructure.web.mvc;
+package com.tumu.infrastructure.web.mvc.handler;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;

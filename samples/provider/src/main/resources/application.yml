@@ -13,3 +13,6 @@ spring:
         file-extension: yaml
   main:
     allow-bean-definition-overriding: true
+#exception:
+#  display:
+#    enable: true

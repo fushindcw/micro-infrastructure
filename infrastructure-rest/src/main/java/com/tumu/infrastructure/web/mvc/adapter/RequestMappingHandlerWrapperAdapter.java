@@ -1,5 +1,6 @@
-package com.tumu.infrastructure.web.mvc;
+package com.tumu.infrastructure.web.mvc.adapter;
 
+import com.tumu.infrastructure.web.mvc.handler.ResponseWrapperHandler;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;

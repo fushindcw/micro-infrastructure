@@ -2,6 +2,7 @@ package com.tumu.infrastructure.commons.dto;
 
 import java.io.Serializable;
 
+import com.tumu.infrastructure.commons.MessageTypeEnum;
 import com.tumu.infrastructure.commons.StatusEnum;
 import com.tumu.infrastructure.commons.exception.AbstractBusinessException;
 
@@ -13,6 +14,7 @@ import lombok.Setter;
 public final class ResponseResult<T> implements Serializable{
     private Integer code;
     private String message;
+    private MessageTypeEnum messageType;
     private T data;
 
     public ResponseResult(){
@@ -32,10 +34,17 @@ public final class ResponseResult<T> implements Serializable{
     public ResponseResult(AbstractBusinessException businessException){
         this.code = businessException.statusCode();
         this.message = businessException.getMessage();
+        this.messageType = businessException.messageType();
     }
 
     public ResponseResult(Integer code, String message){
         this.code = code;
         this.message = message;
+    }
+
+    public ResponseResult(Integer code, String message, MessageTypeEnum messageType){
+        this.code = code;
+        this.message = message;
+        this.messageType = messageType;
     }
 }
