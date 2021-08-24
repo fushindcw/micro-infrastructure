@@ -43,7 +43,7 @@ public class TestServiceImpl implements ITestService{
         return null;
     }
 
-    @PostMapping(value="/test02")
+    @GetMapping(value="/test02")
     @ResponseBody
     public Map<String,String> test02(@RequestBody Map<String,String> body){
         throw new CommonBusinessException("hello", StatusEnum.NOT_FOUND.getCode());

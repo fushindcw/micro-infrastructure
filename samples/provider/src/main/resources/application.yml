@@ -6,10 +6,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        enabled: false
+        enabled: true
         server-addr: 192.168.100.108:8848
       config:
-        enabled: false
+        enabled: true
         server-addr: 192.168.100.108:8848
         prefix: application
         file-extension: yaml

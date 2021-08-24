@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.ffty.infrastructure.web.InfrastructureRestAutoConfiguration
+com.ffty.infrastructure.feign.UnwrapFeignClientConfig

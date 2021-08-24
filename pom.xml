@@ -11,7 +11,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <revision>1.0.0</revision>
+        <revision>1.0.1-SNAPSHOT</revision>
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
     </properties>
@@ -42,11 +42,11 @@
                 <version>1.18.12</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- <dependency>
-                      <groupId>com.ffty</groupId>
-                      <artifactId>infrastructure-commons</artifactId>
-                      <version></version>
-                  </dependency> -->
+            <dependency>
+                <groupId>com.ffty</groupId>
+                <artifactId>infrastructure-commons</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>

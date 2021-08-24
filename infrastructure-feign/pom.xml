@@ -26,7 +26,6 @@
     <dependency>
 			<groupId>com.ffty</groupId>
 			<artifactId>infrastructure-commons</artifactId>
-			<version>${revision}</version>
 		</dependency>
   </dependencies>
 </project>
