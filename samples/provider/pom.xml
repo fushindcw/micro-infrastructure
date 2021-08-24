@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-		<groupId>com.tumu</groupId>
+		<groupId>com.ffty</groupId>
 		<artifactId>samples</artifactId>
 		<version>${revision}</version>
 	</parent>
@@ -16,11 +16,11 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.tumu</groupId>
+      <groupId>com.ffty</groupId>
       <artifactId>infrastructure-rest</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.tumu</groupId>
+      <groupId>com.ffty</groupId>
       <artifactId>infrastructure-feign</artifactId>
     </dependency>
     <dependency>
@@ -28,7 +28,7 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
     <dependency>
-			<groupId>com.tumu</groupId>
+			<groupId>com.ffty</groupId>
 			<artifactId>api</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
@@ -53,5 +53,13 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
 		</dependency>
+
+	  <!-- https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder -->
+	  <dependency>
+		  <groupId>net.logstash.logback</groupId>
+		  <artifactId>logstash-logback-encoder</artifactId>
+		  <version>6.6</version>
+	  </dependency>
+
   </dependencies>
 </project>

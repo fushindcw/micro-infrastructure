@@ -3,11 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>micro-infrastructure</artifactId>
-    <groupId>com.tumu</groupId>
+    <groupId>com.ffty</groupId>
     <version>${revision}</version>
   </parent>
 
-  <groupId>com.tumu</groupId>
   <artifactId>infrastructure-feign</artifactId>
 
   <name>infrastructure-feign</name>
@@ -25,7 +24,7 @@
 			<version>1.2.76</version>
 		</dependency>
     <dependency>
-			<groupId>com.tumu</groupId>
+			<groupId>com.ffty</groupId>
 			<artifactId>infrastructure-commons</artifactId>
 			<version>${revision}</version>
 		</dependency>
