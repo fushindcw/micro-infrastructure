@@ -20,7 +20,7 @@
 			<dependency>
 				<groupId>com.ffty</groupId>
 				<artifactId>ffty-dependencies-parent</artifactId>
-				<version>1.0.4-SNAPSHOT</version>
+				<version>1.0.5-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

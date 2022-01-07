@@ -1,20 +1,26 @@
 server:
     port: 8093
 spring:
+  response:
+    include:
+      - '/provider/**'
   application:
     name: providerService
   cloud:
     nacos:
       discovery:
-        enabled: true
+        enabled: false
         server-addr: 192.168.100.108:8848
       config:
-        enabled: true
+        enabled: false
         server-addr: 192.168.100.108:8848
         prefix: application
         file-extension: yaml
   main:
     allow-bean-definition-overriding: true
+springdoc:
+  api-docs:
+    enable: true
 #exception:
 #  display:
 #    enable: true
