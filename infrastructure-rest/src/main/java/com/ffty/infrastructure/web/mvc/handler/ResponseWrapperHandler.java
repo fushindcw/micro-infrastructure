@@ -45,6 +45,7 @@ public final class ResponseWrapperHandler implements HandlerMethodArgumentResolv
             NativeWebRequest webRequest) throws IOException, HttpMediaTypeNotAcceptableException, HttpMessageNotWritableException {
         List<String> includesPattern = this.wrapperProperties.getScanPackage();
         if(!CollectionUtils.isEmpty(includesPattern)){
+            //TODO 待修改
             String contextPath = webRequest.getNativeRequest(HttpServletRequest.class).getServletPath();
             List<String> originPatternList = includesPattern.stream()
                     .map(this::parsePattern)
