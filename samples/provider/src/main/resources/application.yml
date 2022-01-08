@@ -2,8 +2,8 @@ server:
     port: 8093
 spring:
   response:
-    include:
-      - '/provider/**'
+    scan-package:
+      - com.ffty
   application:
     name: providerService
   cloud:
@@ -21,6 +21,6 @@ spring:
 springdoc:
   api-docs:
     enable: true
-#exception:
-#  display:
-#    enable: true
+exception:
+  display:
+    enable: true

@@ -24,7 +24,7 @@ public class DocConfig {
     }
 
     @Bean
-    public OpenAPI springShopOpenAPI() {
+    public OpenAPI springShopOpenApi() {
         return new OpenAPI()
                 .info(new Info().title("SpringShop API")
                         .description("Spring shop sample application")

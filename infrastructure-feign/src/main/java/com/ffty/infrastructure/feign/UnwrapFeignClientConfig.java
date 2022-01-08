@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Primary;
 import feign.codec.Decoder;
 import feign.optionals.OptionalDecoder;
 
+/**
+ * @author dingchw
+ */
 @Configuration
 public class UnwrapFeignClientConfig {
     @Bean

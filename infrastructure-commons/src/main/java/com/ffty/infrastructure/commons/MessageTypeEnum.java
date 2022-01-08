@@ -1,9 +1,28 @@
 package com.ffty.infrastructure.commons;
 
+/**
+ * @author dingchw
+ */
+
 public enum MessageTypeEnum {
-    WARN, //警告
-    CONFIRM, //确认
-    FAIL, //失败
-    ERROR, //错误
-    EXPLAIN; //解释
+    /**
+     * 警告
+     */
+    WARN,
+    /**
+     * 确认
+     */
+    CONFIRM,
+    /**
+     * 失败
+     */
+    FAIL,
+    /**
+     * 错误
+     */
+    ERROR,
+    /**
+     * 解释
+     */
+    EXPLAIN;
 }

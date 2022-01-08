@@ -9,6 +9,9 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBody
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author dingchw
+ */
 public class RequestMappingHandlerWrapperAdapter extends RequestMappingHandlerAdapter {
     private final WrapperProperties wrapperProperties;
 
@@ -20,9 +23,12 @@ public class RequestMappingHandlerWrapperAdapter extends RequestMappingHandlerAd
     public void afterPropertiesSet() {
         super.afterPropertiesSet();
         List<HandlerMethodReturnValueHandler> originList = super.getReturnValueHandlers();
+        if(null == originList){
+            return;
+        }
         RequestResponseBodyMethodProcessor responseBodyMethodProcessor = originList.stream()
-                .filter(item->item instanceof RequestResponseBodyMethodProcessor)
-                .map(item->(RequestResponseBodyMethodProcessor)item)
+                .filter(RequestResponseBodyMethodProcessor.class::isInstance)
+                .map(RequestResponseBodyMethodProcessor.class::cast)
                 .findFirst().orElse(null);
         List<HandlerMethodReturnValueHandler> addingList = new ArrayList<>(originList);
         if(null != responseBodyMethodProcessor){

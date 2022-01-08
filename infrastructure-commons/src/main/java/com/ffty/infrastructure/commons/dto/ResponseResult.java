@@ -3,29 +3,32 @@ package com.ffty.infrastructure.commons.dto;
 import java.io.Serializable;
 
 import com.ffty.infrastructure.commons.MessageTypeEnum;
-import com.ffty.infrastructure.commons.StatusEnum;
+import com.ffty.infrastructure.commons.CommonStatusEnum;
 import com.ffty.infrastructure.commons.exception.AbstractBusinessException;
 
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author dingchw
+ */
 @Setter
 @Getter
-public final class ResponseResult<T> implements Serializable{
+public final class ResponseResult<T extends Serializable> implements Serializable{
     private Integer code;
     private String message;
     private MessageTypeEnum messageType;
     private T data;
 
     public ResponseResult(){
-        this(null, StatusEnum.OK);
+        this(null, CommonStatusEnum.OK);
     }
 
     public ResponseResult(T data){
-        this(data, StatusEnum.OK);
+        this(data, CommonStatusEnum.OK);
     }
 
-    public ResponseResult(T data, StatusEnum status){
+    public ResponseResult(T data, CommonStatusEnum status){
         this.data = data;
         this.code = status.getCode();
         this.message = status.getMsg();

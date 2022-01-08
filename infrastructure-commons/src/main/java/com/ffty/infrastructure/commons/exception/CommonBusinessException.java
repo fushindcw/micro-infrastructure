@@ -1,7 +1,22 @@
 package com.ffty.infrastructure.commons.exception;
 
+import com.ffty.infrastructure.commons.CommonStatusEnum;
+import com.ffty.infrastructure.commons.Status;
+
+/**
+ * @author dingchw
+ */
 public final class CommonBusinessException extends AbstractBusinessException{
-    private Integer statusCode;
+    private final Integer statusCode;
+
+    public CommonBusinessException(Status status){
+        super(status.getMsg());
+        this.statusCode = status.getCode();
+    }
+    public CommonBusinessException(String msg, Status status) {
+        super(msg);
+        this.statusCode = status.getCode();
+    }
 
     public CommonBusinessException(String msg, Integer statusCode) {
         super(msg);
@@ -11,6 +26,11 @@ public final class CommonBusinessException extends AbstractBusinessException{
     public CommonBusinessException(Throwable t, Integer statusCode) {
         super(t);
         this.statusCode = statusCode;
+    }
+
+    public CommonBusinessException(Throwable t) {
+        super(t);
+        this.statusCode = CommonStatusEnum.ERROR.getCode();
     }
 
     @Override

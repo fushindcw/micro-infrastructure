@@ -1,5 +1,9 @@
 package com.ffty;
 
-public interface ProviderConstants {
-    String APP_NAME="providerService";
+/**
+ * @author dingchw
+ */
+public class ProviderConstants {
+    private ProviderConstants() {}
+    public static final String APP_NAME="providerService";
 }
