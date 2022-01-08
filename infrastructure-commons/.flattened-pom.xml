@@ -4,18 +4,18 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ffty</groupId>
   <artifactId>infrastructure-commons</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2</version>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.12</version>
+      <version>1.18.22</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>5.2.8.RELEASE</version>
+      <version>5.3.14</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
