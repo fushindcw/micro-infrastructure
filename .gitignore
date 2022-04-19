@@ -18,7 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
-*.txt
+.flattened-pom.xml
+**.txt
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,4 +33,3 @@ build/
 
 ### VS Code ###
 .vscode/
-.flattened-pom.xml
