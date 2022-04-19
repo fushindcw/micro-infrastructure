@@ -18,7 +18,7 @@ public class DocConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("springshop")
-                .packagesToScan("com.ffty.provider.service")
+                .packagesToScan("com.fushindcw.provider.service")
                 .pathsToMatch("/**")
                 .build();
     }
