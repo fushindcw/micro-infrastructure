@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ffty</groupId>
+    <groupId>com.fushindcw</groupId>
     <artifactId>micro-infrastructure</artifactId>
     <version>${revision}</version>
     <name>micro-infrastructure</name>
@@ -43,7 +43,7 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.ffty</groupId>
+                <groupId>com.fushindcw</groupId>
                 <artifactId>infrastructure-commons</artifactId>
                 <version>${revision}</version>
             </dependency>

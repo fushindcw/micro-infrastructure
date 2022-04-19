@@ -4,23 +4,22 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-		<groupId>com.ffty</groupId>
+		<groupId>com.fushindcw</groupId>
 		<artifactId>samples</artifactId>
 		<version>${revision}</version>
 	</parent>
   <artifactId>provider</artifactId>
 
   <name>provider</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <dependencies>
     <dependency>
-      <groupId>com.ffty</groupId>
+      <groupId>com.fushindcw</groupId>
       <artifactId>infrastructure-rest</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.ffty</groupId>
+      <groupId>com.fushindcw</groupId>
       <artifactId>infrastructure-feign</artifactId>
     </dependency>
     <dependency>
@@ -28,7 +27,7 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
     <dependency>
-			<groupId>com.ffty</groupId>
+			<groupId>com.fushindcw</groupId>
 			<artifactId>api</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
@@ -46,10 +45,10 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
