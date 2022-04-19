@@ -12,6 +12,7 @@ import com.fushindcw.infrastructure.commons.dto.ResponseResult;
 
 import com.fushindcw.infrastructure.web.WrapperProperties;
 import org.springframework.core.MethodParameter;
+import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
@@ -50,6 +51,7 @@ public final class ResponseWrapperHandler implements HandlerMethodArgumentResolv
             String classPackage = returnType.getDeclaringClass().getPackage().getName();
             boolean match = matchPackage(scanPackageList, classPackage);
             if (match) {
+                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
                 if (returnValue instanceof ResponseResult) {
                     mavContainer.setRequestHandled(true);
                     response.getWriter().write(JSON.toJSONString(returnValue));
