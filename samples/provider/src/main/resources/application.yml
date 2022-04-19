@@ -3,7 +3,7 @@ server:
 spring:
   response:
     scan-package:
-      - com.ffty
+      - com.fushindcw
   application:
     name: providerService
   cloud:
