@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * @author dingchw
  */
-@EnableFeignClients(basePackages = "com.ffty")
+@EnableFeignClients(basePackages = "com.fushindcw")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ConsumerApplication {
