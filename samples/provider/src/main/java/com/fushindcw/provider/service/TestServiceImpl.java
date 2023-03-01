@@ -26,6 +26,9 @@ public class TestServiceImpl implements ITestService {
     @Override
     @ResponseBody
     public String test(String msg) {
+        if(msg.equals("consumer apply dcw")){
+            throw new CommonBusinessException("error", CommonStatusEnum.ERROR.getCode());
+        }
         log.info("test>>>{}", msg);
         return "hello " + msg;
     }
@@ -44,7 +47,7 @@ public class TestServiceImpl implements ITestService {
         }
     }
 
-    @GetMapping(value = "/test02")
+    @PostMapping(value = "/test02")
     @ResponseBody
     public Map<String, String> test02(@RequestBody Map<String, String> body) {
         throw new CommonBusinessException("hello", CommonStatusEnum.NOT_FOUND.getCode());

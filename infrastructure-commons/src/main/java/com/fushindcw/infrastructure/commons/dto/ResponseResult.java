@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.fushindcw.infrastructure.commons.MessageTypeEnum;
 import com.fushindcw.infrastructure.commons.CommonStatusEnum;
+import com.fushindcw.infrastructure.commons.Status;
 import com.fushindcw.infrastructure.commons.exception.AbstractBusinessException;
 
 import lombok.Getter;
@@ -35,8 +36,10 @@ public final class ResponseResult<T extends Serializable> implements Serializabl
     }
 
     public ResponseResult(AbstractBusinessException businessException){
-        this.code = businessException.statusCode();
-        this.message = businessException.getMessage();
+        Enum<? extends Status> statusEnum  = businessException.status();
+        Status status = Enum.valueOf(statusEnum.getDeclaringClass(), statusEnum.name());
+        this.code = status.getCode();
+        this.message = status.getMsg();
         this.messageType = businessException.messageType();
     }
 

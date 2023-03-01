@@ -23,28 +23,8 @@ import feign.Response;
  */
 public class UnwrapDecoder extends SpringDecoder{
 
-    public UnwrapDecoder(ObjectFactory<HttpMessageConverters> messageConverters) {
-        super(messageConverters, new ObjectProvider<HttpMessageConverterCustomizer>() {
-            @Override
-            public HttpMessageConverterCustomizer getObject(Object... args) throws BeansException {
-                return null;
-            }
-
-            @Override
-            public HttpMessageConverterCustomizer getIfAvailable() throws BeansException {
-                return null;
-            }
-
-            @Override
-            public HttpMessageConverterCustomizer getIfUnique() throws BeansException {
-                return null;
-            }
-
-            @Override
-            public HttpMessageConverterCustomizer getObject() throws BeansException {
-                return null;
-            }
-        });
+    public UnwrapDecoder(ObjectFactory<HttpMessageConverters> messageConverters, ObjectProvider<HttpMessageConverterCustomizer> customizers) {
+        super(messageConverters, customizers);
     }
 
     @Override

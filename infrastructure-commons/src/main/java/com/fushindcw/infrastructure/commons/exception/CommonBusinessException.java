@@ -34,8 +34,8 @@ public final class CommonBusinessException extends AbstractBusinessException{
     }
 
     @Override
-    public Integer statusCode() {
-        return this.statusCode;
+    public CommonStatusEnum status() {
+        return CommonStatusEnum.OK;
     }
     
 }

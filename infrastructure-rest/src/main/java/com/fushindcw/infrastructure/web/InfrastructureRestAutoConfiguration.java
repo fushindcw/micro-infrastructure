@@ -3,6 +3,7 @@ package com.fushindcw.infrastructure.web;
 import com.fushindcw.infrastructure.commons.MessageTypeEnum;
 import com.fushindcw.infrastructure.commons.dto.ResponseResult;
 import com.fushindcw.infrastructure.commons.exception.AbstractBusinessException;
+import com.fushindcw.infrastructure.commons.exception.CommonBusinessException;
 import com.fushindcw.infrastructure.web.mvc.adapter.RequestMappingHandlerWrapperAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

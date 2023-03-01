@@ -17,6 +17,7 @@ public class TestController {
 
     @GetMapping(value="consumer/test/{msg}")
     public String test(@PathVariable("msg")String msg){
-        return this.testService.test("consumer apply " + msg);
+        String result = this.testService.test("consumer apply " + msg);
+        return result;
     }
 }

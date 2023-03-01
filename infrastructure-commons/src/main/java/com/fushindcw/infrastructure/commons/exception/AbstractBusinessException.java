@@ -1,6 +1,7 @@
 package com.fushindcw.infrastructure.commons.exception;
 
 import com.fushindcw.infrastructure.commons.MessageTypeEnum;
+import com.fushindcw.infrastructure.commons.Status;
 
 /**
  * @author dingchw
@@ -18,7 +19,7 @@ public abstract class AbstractBusinessException extends RuntimeException{
      * 获取状态码
      * @return
      */
-    public abstract Integer statusCode();
+    public abstract Enum<? extends Status> status();
 
     public MessageTypeEnum messageType(){
         return MessageTypeEnum.WARN;
